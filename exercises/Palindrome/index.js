@@ -14,7 +14,12 @@
  */
 
 function palindrome(str) {
-
+    var strRev = str.split('').reverse().join('');
+    if(str===strRev) {
+      return true;
+    } else {
+      return false;
+    }
 }
 
 module.exports = palindrome;

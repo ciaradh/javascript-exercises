@@ -12,7 +12,15 @@
  */
 
 function capitalize(str) {
-
+  // splitting at every space to get the words separated
+  str = str.toLowerCase().split(' ');
+  //cycling the array and capitalizing every work
+  for (var i = 0; i < str.length; i++) {
+		str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+	}
+  //re-unites array into string
+  str= str.join(' ');
+  return str;
 }
 
 module.exports = capitalize;

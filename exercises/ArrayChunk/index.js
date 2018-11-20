@@ -13,7 +13,15 @@
  */
 
 function chunk(array, size) {
-
+    var i;
+    //dichiaro qui o me la riscrive ogni volta se la dichiaro nel loop
+    var newArray = [];
+    for(i=0; i<array.length; i+=size) {
+      //i+size altrimenti ad un certo punto i>size e non esce nulla
+      var chunk = array.slice(i,i+size);
+      newArray.push(chunk);
+    }
+    return newArray;
 }
 
 module.exports = chunk;

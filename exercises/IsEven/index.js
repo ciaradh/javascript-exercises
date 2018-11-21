@@ -11,7 +11,17 @@
 */
 
 function isEven(n) {
+  //https://www.w3schools.com/js/js_bitwise.asp
 
+  if(n & 1) {
+    //& trasforma i numeri in 32bit quindi in combinazioni di 0 e 1
+    // i due numeri insieme se danno 1 sono dispari, altrimenti pari
+    console.log(false);
+    return false;
+  } else {
+    console.log(true);
+    return true;
+  }
 }
 
 module.exports = isEven;
